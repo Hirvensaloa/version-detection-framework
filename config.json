@@ -1,0 +1,43 @@
+{
+  "name": "concourse",
+  "reruns_default": 30,
+  "timeout": "2m",
+  "jobs": [
+    {
+      "version": "17.3.1"
+    },
+    {
+      "version": "17.2.1"
+    },
+    {
+      "version": "17.1.1"
+    },
+    {
+      "version": "17.0.37"
+    },
+    {
+      "version": "16.1.24"
+    },
+    {
+      "version": "16.0.3"
+    },
+    {
+      "version": "15.7.1"
+    },
+    {
+      "version": "15.6.0"
+    },
+    {
+      "version": "15.5.0"
+    },
+    {
+      "version": "15.4.0"
+    }
+  ],
+  "use_oci": false,
+  "url": "oci://registry-1.docker.io/bitnamicharts/concourse",
+  "label": "my-release",
+  "_COMMENT": "Use the below commands to install the chart with https registry. Make sure use_oci is set to false and label matches the helm install [label]",
+  "repo_add": "helm repo add concourse https://concourse-charts.storage.googleapis.com/",
+  "helm_install": "helm install my-release concourse/concourse"
+}

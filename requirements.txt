@@ -1,0 +1,9 @@
+scapy==2.5.0
+scikit-learn==1.5.1
+pandas==2.2.2
+matplotlib==3.9.2
+seaborn==0.13.2
+pyshark==0.6
+cdifflib==1.2.6
+numpy==2.1.1
+semver==3.0.2
