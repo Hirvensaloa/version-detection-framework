@@ -6,7 +6,7 @@ def summarize_csv_folders(folders, output_file):
     summary_data = []
 
     for folder in folders:
-        folder_name = folder.rstrip(os.sep).split("\\")[1]
+        folder_name = os.path.normpath(folder).split("/")[-2]
         csv_files = [f for f in os.listdir(folder) if f.endswith('prediction_results.csv')]
 
         for csv_file in csv_files:
