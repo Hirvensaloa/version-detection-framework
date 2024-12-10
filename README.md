@@ -1,3 +1,21 @@
+# Index
+
+1. [Introduction](#introduction)
+2. [Requirements](#requirements)
+3. [Installation](#installation)
+4. [Usage](#usage)
+   - [1. Data Collection](#1-data-collection)
+     - [Prerequisites](#prerequisites-for-data-collection)
+     - [Usage](#usage-for-data-collection)
+   - [2. Fingerprinting](#2-fingerprinting)
+     - [Prerequisites](#prerequisites-for-fingerprinting)
+     - [Usage](#usage-for-fingerprinting)
+   - [3. Classification](#3-classification)
+     - [Prerequisites](#prerequisites-for-classification)
+     - [Usage](#usage-for-classification)
+5. [Dataset](#dataset)
+6. [Other](#other)
+
 # Introduction
 
 This project is part of my master thesis. The repository contains a dataset and source code for a framework. The framework is used to create unique fingerprints for Helm chart applications. The goal is to be able to classify network traffic traces that belong to a certain Helm chart version or not.
@@ -107,7 +125,12 @@ For example:
 python classify.py ./data/nats-20240919231929/fingerprint_comparison/aggregated_results.csv
 ```
 
+# Dataset
+
+The dataset is available for download from the following link: [Zenodo](https://doi.org/10.5281/zenodo.14338912).
+
+- [data](./data/README.md) folder contains data collected using the `application_capture.py` script and/or you can download the dataset and extract it there.
+
 # Other
 
-- [data](./data/README.md) folder contains the dataset used in the thesis.
 - [analyse](./analyse/README.md) folder contains scripts used to analyse the applications, data and results.
