@@ -5,14 +5,14 @@
 3. [Installation](#installation)
 4. [Usage](#usage)
    - [1. Data Collection](#1-data-collection)
-     - [Prerequisites](#prerequisites-for-data-collection)
-     - [Usage](#usage-for-data-collection)
+     - [Prerequisites](#pre1)
+     - [Usage](#use1)
    - [2. Fingerprinting](#2-fingerprinting)
-     - [Prerequisites](#prerequisites-for-fingerprinting)
-     - [Usage](#usage-for-fingerprinting)
+     - [Prerequisites](#pre2)
+     - [Usage](#use2)
    - [3. Classification](#3-classification)
-     - [Prerequisites](#prerequisites-for-classification)
-     - [Usage](#usage-for-classification)
+     - [Prerequisites](#pre3)
+     - [Usage](#use3)
 5. [Dataset](#dataset)
 6. [Other](#other)
 
@@ -44,6 +44,7 @@ pip install -r requirements.txt
 # 1. Data collection
 
 Generates network traffic traces for a specified application and versions. The traces are collected from a Kubernetes cluster. The network traffic traces are stored in PCAP format.
+<a id="pre1"></a>
 
 ## Prerequisites
 
@@ -79,6 +80,8 @@ Create a `config.json` file in the root directory. The file should contain the f
 }
 ```
 
+<a id="use1"></a>
+
 ## Usage
 
 ```bash
@@ -88,10 +91,12 @@ python application_capture.py
 # 2. Fingerprinting
 
 Generates a unique fingerprint for an application version. The fingerprint is generated from the network traffic traces collected in the data collection part. The data collection part is not necessary if you can provide the PCAP files from other sources. Once the fingerprints are created, the PCAP files not used in the fingerprints are compared against the fingerprints to generate a difference csv file (`aggregated_results.csv`). The difference csv file is then used to classify network traffic traces.
+<a id="pre2"></a>
 
 ## Prerequisites
 
 - Have a dataset collected from the data collection part. The dataset should be stored in the `data` folder.
+  <a id="use2"></a>
 
 ## Usage
 
@@ -109,9 +114,12 @@ python fingerprint.py ./data/nats-20240919231929
 
 Classifies network traffic packet differences between a fingerprint and a PCAP file. The classification is implemented with Random Forest.
 
+<a id="pre3"></a>
+
 ## Prerequisites
 
 - Have a folder named `fingerprint_comparison` inside the app specific data folder. The folder should contain an `aggregated_results.csv` file which is used as the classifiers input.
+  <a id="use3"></a>
 
 ## Usage
 
