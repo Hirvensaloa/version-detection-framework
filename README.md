@@ -85,7 +85,7 @@ Create a `config.json` file in the root directory. The file should contain the f
 ## Usage
 
 ```bash
-python application_capture.py
+python3 application_capture.py
 ```
 
 # 2. Fingerprinting
@@ -101,13 +101,13 @@ Generates a unique fingerprint for an application version. The fingerprint is ge
 ## Usage
 
 ```bash
-python fingerprint.py ./data/<app_folder_name>
+python3 fingerprint.py ./data/<app_folder_name>
 ```
 
 For example:
 
 ```bash
-python fingerprint.py ./data/nats-20240919231929
+python3 fingerprint.py ./data/nats-20240919231929
 ```
 
 # 3. Classification
@@ -124,13 +124,13 @@ Classifies network traffic packet differences between a fingerprint and a PCAP f
 ## Usage
 
 ```bash
-python classify.py ./data/<app_folder_name>/fingerprint_comparison/aggregated_results.csv
+python3 classify.py ./data/<app_folder_name>/fingerprint_comparison/aggregated_results.csv
 ```
 
 For example:
 
 ```bash
-python classify.py ./data/nats-20240919231929/fingerprint_comparison/aggregated_results.csv
+python3 classify.py ./data/nats-20240919231929/fingerprint_comparison/aggregated_results.csv
 ```
 
 # Dataset
