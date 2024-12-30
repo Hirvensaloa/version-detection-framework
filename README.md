@@ -18,11 +18,11 @@
 
 # Introduction
 
-This project is part of my master thesis. The repository contains a dataset and source code for a framework. The framework is used to create unique fingerprints for Helm chart applications. The goal is to be able to classify network traffic traces that belong to a certain Helm chart version or not.
+This project is part of my master thesis. The repository contains the thesis document and source code for a framework. The framework is used to create unique fingerprints for Helm chart applications. The goal is to be able to classify network traffic traces that belong to a certain Helm chart version or not.
 
 The framework itself is split into three parts: Data collection, Fingerprinting and Classification. The data collection part is responsible for collecting network traffic traces from a Kubernetes cluster. The fingerprinting part is responsible for creating a unique fingerprint for an application version. The classification part is responsible for classifying network traffic traces based on the fingerprints.
 
-More details can be found in the thesis document.
+More details can be found in the thesis document [here](Version_Sensitive_Network_Traffic_Classification_for_Kubernetes_Applications.pdf).
 
 # Requirements
 

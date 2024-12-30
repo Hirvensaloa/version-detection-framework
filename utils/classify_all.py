@@ -13,4 +13,4 @@ for folder in folders:
 
 # Run classify.py on each file (script)
 for f in files: 
-    os.system(f'python ../classify.py {f}')
+    os.system(f'python3 ../classify.py {f}')
